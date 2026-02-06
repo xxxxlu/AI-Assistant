@@ -1,61 +1,33 @@
-# AI Assistant Knowledge Base
+# AI Assistant Second Brain
 
-A comprehensive knowledge management and decision support system designed for AI assistants. This repository serves as a structured knowledge base that enables intelligent navigation of information and defines behavioral patterns across various scenarios.
+一个面向 AI 助手的知识路由与执行规范仓库，用于统一“怎么找信息、按什么规则决策、如何记录痕迹”。
 
-## Overview
+## 当前定位
 
-This system provides a centralized framework for organizing and accessing knowledge, implementing a routing mechanism that guides AI assistants in information retrieval and decision-making processes. It establishes clear protocols for identity management, information access priorities, and interaction patterns.
+- 核心路由：`docs/router.md`
+- 规则中心：`docs/rules/`
+- 记忆中心：`docs/memory/`
+- 技能中心：`docs/skills/` 与 `docs/dev/`
+- 日志中心：`docs/logs/`
 
-## Core Components
+## 文档结构
 
-### Routing System
-The routing system defines how AI assistants navigate and access different types of information, establishing clear pathways for:
-- Identity and role determination
-- Information retrieval prioritization
-- Decision-making workflows
-- Specialized routing rules for different domains
+- `docs/router.md`：全局路由、身份与决策流程
+- `docs/rules/`：访问规则与约束
+- `docs/memory/`：用户偏好、交互历史与身份相关信息
+- `docs/skills/`：通用技能导航（技术/创意/学习）
+- `docs/dev/`：研发阶段技能、评审模板、流程规范
+- `docs/world/`：外部知识使用约定
+- `docs/logs/`：错误、安全、文件访问日志
 
-### Knowledge Organization
-The repository implements a structured approach to knowledge management using the PARA methodology:
-- **Projects**: Active initiatives and deliverables
-- **Areas**: Ongoing responsibilities and domains of expertise
-- **Resources**: Reference materials and research
-- **Archives**: Completed projects and historical records
+## 使用方式
 
-### Documentation Structure
-- `docs/`: Core documentation and routing configurations
-- `skills/`: Specialized capabilities and workflows
-- `memory/`: Interaction history and user preferences
-- `ruls/`: System rules and access controls
+1. 先读 `docs/router.md` 决定信息检索与响应策略。
+2. 再按优先级进入 `rules -> memory -> skills -> world -> dev`。
+3. 若发生异常或敏感访问，按 `docs/logs/` 模板记录。
 
-## Key Features
+## 站点预览
 
-- **Intelligent Information Routing**: Prioritized access to rules, memory, skills, and world knowledge
-- **Identity Management**: Clear definition of AI assistant roles and responsibilities
-- **Security Protocols**: Handshake mechanisms and security reset procedures
-- **Error Handling**: Comprehensive logging and error recovery systems
-- **Extensible Architecture**: Modular design for adding new capabilities
-
-## Documentation Standards
-
-All documentation follows established conventions for:
-- Clear citation of information sources
-- Explicit identification of knowledge bases
-- Transparent reasoning processes
-- Comprehensive error logging
-
-## Usage
-
-This knowledge base serves as the foundation for AI assistant operations, providing:
-- Structured access to organizational knowledge
-- Defined behavioral patterns and protocols
-- Clear guidelines for information access and decision-making
-- Mechanisms for continuous learning and improvement
-
-## Contributing
-
-Contributions should maintain consistency with the established documentation standards and routing protocols. All additions should clearly identify information sources and follow the defined structure.
-
-## License
-
-This project is maintained as part of the AI Assistant infrastructure.
+- 开发：`pnpm docs:dev`
+- 构建：`pnpm docs:build`
+- 预览：`pnpm docs:preview`

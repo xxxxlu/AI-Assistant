@@ -1,25 +1,23 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
-  name: "AI-Assistant"
-  text: "AI Common 是 Boss 的 AI 大脑"
-  tagline: My great project tagline
+  name: "AI Second Brain"
+  text: "Boss 的知识路由与执行中枢"
+  tagline: "先路由，后执行；可追溯，可迭代"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 查看路由系统
+      link: /router
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 查看规则中心
+      link: /rules/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 统一决策路径
+    details: 通过固定优先级完成信息检索与冲突处理。
+  - title: 结构化知识库
+    details: 将规则、记忆、技能、开发规范拆分为独立模块。
+  - title: 可追溯执行
+    details: 通过标准日志模板记录异常、安全和关键访问。
 ---
-

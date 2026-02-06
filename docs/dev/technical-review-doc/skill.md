@@ -1,104 +1,42 @@
 ---
-name: req-review-tech-doc
-description: Generate a Chinese front-end technical document from requirement review notes. Use when asked to output versioned "前端技术方案/技术文档" in Markdown. This workflow supports conditional interface contract gating and static-first development.
+name: technical-review-doc
+description: Generate an API contract and technical review document in Chinese after requirement review. Use when APIs are involved and the team needs contract-level alignment before real integration.
 ---
 
-# 需求评审输出技术文档
+# 技能：接口契约与技术评审文档
 
 ## Overview
 
-将需求评审内容整理为**可评审、可开发、可回溯**的前端技术方案文档，作为本次迭代的设计蓝图，并作为后续接口契约与开发执行的输入依据。
-
----
+当需求进入“接口依赖”阶段时，输出可评审、可联调、可追责的接口契约文档，作为前后端一致性的基线。
 
 ## Workflow
 
-### 1. 收集输入信息（最小集）
+### 1. 收集最小输入
 
-- 版本号、迭代周期、负责人
-- 目标（主要 / 次要）
-- 需求清单（新增功能 / 优化任务 / Bug 修复）
-- 排期与流程
-- 技术方案设计（组件设计 / API 变更 / 三方库 / 风险点）
+- 版本号与关联技术方案路径
+- 前后端负责人
+- 涉及接口清单（路径、方法、用途）
+- 鉴权、分页、错误码等全局约定
 
-> 规则：
-> - 信息不完整时，**优先最少追问**
-> - 无法确认的信息统一用 `TBD` 标记，并保留占位
+信息不完整时：优先最少追问；无法确认时标注 `TBD`。
 
----
+### 2. 生成评审文档
 
-### 2. 对齐现有代码习惯（用于“实现注意点”）
+1. 使用模板 `tech-doc-template.md`
+2. 输出路径建议：`manager-tech-docs/{{version}} 接口契约与技术评审.md`
+3. 保留模板章节，不删除关键字段
 
-- 列表页结构、搜索区、公共组件与 render 复用方式
-- 变量与函数命名规范（参考同模块）
-- 路由与权限点（是否新增 / 是否涉及多国家）
-- 图表（G2Plot / ECharts，优先复用封装）
-- 全局公共组件是否需要沉淀
-- 弹窗与确认规范（避免直接使用 window.confirm）
-- 模块拆分与文件结构
+### 3. Gate 判定
 
-> 输出结果必须体现在【实现注意点】中，作为后续 code review 的参考标准。
+- 无接口依赖：回写为 `Static-first`，不阻塞前端静态开发
+- 有接口依赖：必须完成接口字段、错误码、分页、鉴权对齐
 
----
+### 4. 质量检查
 
-### 3. 生成技术文档（主产物）
+- 所有接口条目具备“用途 + 状态 + 责任人”
+- 关键 `TBD` 均有负责人和回填时点
+- 可直接用于联调排期
 
-1. 复制模板 `tech-doc-template.md`
-2. 生成路径：`manager-tech-docs/{{version}} 技术文档.md`
-3. 填充所有占位符，**不允许删除章节**
-4. 需求与排期使用表格；流程使用有序列表
+## Resources
 
----
-
-### 4. 技术评审 & 接口契约 Gate（关键决策点）
-
-在本步骤**只做判断，不做开发**。
-
-#### 4.1 判断是否存在接口依赖
-
-- [ ] 是否涉及新增接口
-- [ ] 是否涉及现有接口字段变更
-- [ ] 是否需要前后端联调才能完成核心功能
-
----
-
-#### 4.2 Gate 决策结果
-
-##### 情况 A：无接口依赖 / 接口未设计（Static-first）
-
-满足以下任一条件：
-
-- 纯静态页面或交互优先
-- 后端接口尚未设计完成
-- 接口是否需要仍不确定
-
-处理规则：
-
-1. 技术文档中 **接口相关内容标记为 `TBD`**
-2. 明确允许进入 **静态页面开发阶段**
-3. 明确禁止：
-   - 真实接口请求实现
-   - 基于字段的核心业务判断
-4. 记录接口回切条件（接口确认 / 字段冻结）
-
----
-
-##### 情况 B：存在接口依赖（进入接口契约流程）
-
-处理规则：
-
-1. 创建《接口契约与技术评审文档》
-2. 明确接口字段、错误码、分页、鉴权
-3. 技术评审结论达成一致
-4. 回写技术文档中的 API 变更结论
-5. 标记接口状态为 **可开发**
-
----
-
-### 5. 输出状态检查（进入开发前）
-
-- [ ] 技术方案文档完成
-- [ ] 接口状态明确（Static-first / 可开发）
-- [ ] 风险点与 TBD 有负责人
-
----
+- `tech-doc-template.md`：接口契约与技术评审模板
