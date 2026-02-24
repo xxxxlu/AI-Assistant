@@ -20,6 +20,7 @@ export default defineConfig({
           { text: '路由系统', link: '/router' },
           { text: '规则中心', link: '/rules/' },
           { text: '技能中心', link: '/skills/' },
+          { text: '技能总览', link: '/skills/all' },
           { text: '开发文档', link: '/dev/' }
         ]
       },
