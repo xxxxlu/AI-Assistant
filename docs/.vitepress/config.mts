@@ -1,6 +1,10 @@
 import { defineConfig } from 'vitepress'
 
+const rawBase = process.env.DOCS_BASE?.trim()
+const base = rawBase ? `/${rawBase.replace(/^\/+|\/+$/g, '')}/` : '/'
+
 export default defineConfig({
+  base,
   title: 'AI-Assistant',
   description: 'AI Common 是 Boss 的 AI 大脑',
   themeConfig: {
@@ -28,6 +32,7 @@ export default defineConfig({
         text: '支持文档',
         items: [
           { text: '世界知识约定', link: '/world/' },
+          { text: '官网接入', link: '/deploy/official-site-integration' },
           { text: '错误日志', link: '/logs/errors' },
           { text: '安全日志', link: '/logs/security' },
           { text: '访问日志', link: '/logs/file-access' }
