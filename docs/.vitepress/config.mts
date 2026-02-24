@@ -31,6 +31,17 @@ export default defineConfig({
           { text: '安全日志', link: '/logs/security' },
           { text: '访问日志', link: '/logs/file-access' }
         ]
+      },
+      {
+        text: '开发目录',
+        items: [
+          { text: '开发文档中心', link: '/dev/' },
+          { text: '需求评审输出', link: '/dev/req-review-tech-doc/' },
+          { text: '接口契约评审', link: '/dev/technical-review-doc/' },
+          { text: '技术方案到实现', link: '/dev/codegen-from-tech-doc/' },
+          { text: 'Git 与 PR 评审', link: '/dev/gitflow-review-doc/' },
+          { text: '开发执行技能', link: '/dev/skills/' }
+        ]
       }
     ]
   }

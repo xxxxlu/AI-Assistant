@@ -1,32 +1,29 @@
-# Dev Skills / Tech Docs Index
-
-> 本目录用于统一管理开发阶段的规范、Skill 与技术文档模板。  
-> 各子目录按开发流程阶段拆分，**使用时以项目实际情况为准**。
-
+---
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
 ---
 
-## 目录说明
+# 开发文档中心
 
-### codegen-from-tech-doc/
-- 基于技术文档进行代码生成的 Skill 与约定
-- 适用于：已完成技术方案，进入代码实现阶段
+## 目录导航
 
-### req-review-tech-doc/
-- 需求评审阶段使用的技术文档规范与模板
-- 适用于：需求澄清、方案设计、评审前准备
+- 需求评审输出：`/dev/req-review-tech-doc/`
+- 接口契约评审：`/dev/technical-review-doc/`
+- 技术方案到实现：`/dev/codegen-from-tech-doc/`
+- Git/PR 评审模板：`/dev/gitflow-review-doc/`
+- 执行技能：`/dev/skills/`
 
-### technical-review-doc/
-- 技术方案评审相关文档与 Skill
-- 适用于：技术方案 Review 与评审结论沉淀
+## 建议顺序
 
-### gitflow-review-doc/
-- gitflow / PR / 流程类规范与 Review 约定
-- 适用于：开发完成后的合并、发布、流程变更
+1. 先做需求评审与方案输出。
+2. 若涉及接口，补齐接口契约评审。
+3. 进入实现阶段前确认开发 Gate。
+4. 提交 PR 前按 Git/PR 模板自检。
 
----
+## 治理规则
 
-## 使用建议（给 AI / 开发者）
-
-- 不确定当前阶段时，优先从需求 → 技术方案 → 实现 → Review 顺序查阅
-- 每个版本的规范或方案，需在对应目录下生成最终文件并提交到 git
-- 本目录中的规则用于约束行为，不强制限制具体实现方式
+1. 模板文件保持结构稳定，避免频繁改字段。
+2. 流程规则变更后，需同步更新相关索引页。
+3. 过期文档按 `last_reviewed` 和 `review_cycle_days` 复核。

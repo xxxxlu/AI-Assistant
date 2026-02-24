@@ -1,3 +1,10 @@
+---
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
+---
+
 # PR 说明（Dev Stage · Final）
 
 ## 一、PR 背景 / 目的

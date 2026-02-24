@@ -1,3 +1,10 @@
+---
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
+---
+
 # 前端开发与 AI 协作规范 (Dev Stage Skills)
 
 ## 一、项目目录与职责映射（Context）

@@ -1,6 +1,10 @@
 ---
 name: req-review-tech-doc
 description: Generate a Chinese front-end technical document from requirement review notes. Use when asked to output versioned "技术文档/前端技术方案" in Markdown with sections for version overview, requirements list, timeline/workflow, and technical design, and when the file must be placed under manager-tech-docs with a version-based filename.
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
 ---
 
 # 需求评审输出技术文档

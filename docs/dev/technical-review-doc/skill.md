@@ -1,6 +1,10 @@
 ---
 name: technical-review-doc
 description: Generate an API contract and technical review document in Chinese after requirement review. Use when APIs are involved and the team needs contract-level alignment before real integration.
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
 ---
 
 # 技能：接口契约与技术评审文档
