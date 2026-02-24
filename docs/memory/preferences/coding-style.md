@@ -1,200 +1,58 @@
+---
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
+---
+
 # 编码风格偏好
 
-## 编程语言偏好
+## 生效范围
 
-### 前端开发
-- **首选**: TypeScript
-- **备选**: JavaScript (ES6+)
-- **原因**: 类型安全，提升代码可维护性
+- 默认适用于所有编码类任务。
+- 若目标项目已有明确规范，优先遵循项目规范。
 
-### 后端开发
-- **首选**: Node.js / Python
-- **备选**: 根据项目需求
-- **原因**: 生态丰富，开发效率高
+## 强偏好（默认生效）
 
-## 命名规范
+1. 语言选择
+- 前端优先 TypeScript。
+- 后端优先 Python / Node.js（按项目现状选）。
 
-### 文件命名
-- **推荐**: `kebab-case`（短横线分隔）
-  - 示例: `user-profile.md`, `tech-stack.md`
-- **避免**: 空格、特殊字符、中文
+2. 命名规范
+- 文件名：`kebab-case`
+- 变量/函数：`camelCase`
+- 常量：`UPPER_SNAKE_CASE`
+- 类/组件：`PascalCase`
 
-### 变量命名
-- **JavaScript/TypeScript**: `camelCase`
-  ```javascript
-  const userName = 'John';
-  const getUserProfile = () => {};
-  ```
+3. 格式规范
+- 缩进：2 空格
+- 字符串：JS/TS 默认单引号
+- 分号：使用分号
+- 行宽：尽量控制在 100 字符以内
 
-- **常量**: `UPPER_SNAKE_CASE`
-  ```javascript
-  const MAX_RETRY_COUNT = 3;
-  const API_BASE_URL = 'https://api.example.com';
-  ```
+4. 导出规范
+- 默认优先命名导出。
+- 默认导出仅用于入口组件或框架约定场景。
 
-- **类/组件**: `PascalCase`
-  ```javascript
-  class UserProfile {}
-  const UserCard = () => {};
-  ```
+5. 注释规范
+- 仅在复杂逻辑、边界处理、权衡决策处写注释。
+- 不写“变量赋值”这类低价值注释。
 
-### 目录命名
-- **小写字母 + 连字符**: `user-management/`, `api-client/`
-- **保持简短有意义**: 避免过长的目录名
+6. 错误处理
+- 外部 I/O、网络、文件、数据库调用必须显式错误处理。
+- 错误信息要可定位，避免吞错。
 
-## 代码格式化
+7. 提交规范
+- 使用 Conventional Commits：`feat/fix/docs/refactor/test/chore`。
+- 单次提交保持单一意图，避免夹带无关改动。
 
-### 缩进
-- **空格数**: 2 个空格
-- **不使用**: Tab 键
+## 禁止项
 
-### 引号
-- **字符串**: 单引号 `'hello'`
-- **JSX**: 双引号 `<div className="container">`
-- **模板字符串**: 反引号 `` `Hello ${name}` ``
+- 无关文件的全量格式化。
+- 在代码或文档中写入密钥、密码、Token 明文。
+- 未确认接口字段时直接硬编码业务含义。
 
-### 分号
-- **使用分号**: 是（明确语句结束）
-- **保持一致**: 整个项目统一风格
+## 关联文档
 
-### 行宽
-- **最大字符数**: 80-100 字符
-- **过长换行**: 使用合理的换行和缩进
-
-## 注释风格
-
-### 单行注释
-```javascript
-// 这是单行注释，用于简短说明
-const result = calculate(); // 行尾注释
-```
-
-### 多行注释
-```javascript
-/**
- * 函数功能说明
- * @param {string} name - 用户名
- * @param {number} age - 年龄
- * @returns {Object} 用户对象
- */
-function createUser(name, age) {
-  return { name, age };
-}
-```
-
-### 文档注释
-- 使用 JSDoc 风格
-- 重要函数必须有注释
-- 复杂逻辑需要解释原因
-
-## 代码组织
-
-### 导入顺序
-```javascript
-// 1. 第三方库
-import React from 'react';
-import axios from 'axios';
-
-// 2. 内部模块
-import { utils } from '@/utils';
-import { config } from '@/config';
-
-// 3. 相对路径
-import Header from './Header';
-import './styles.css';
-```
-
-### 导出方式
-- **推荐**: 命名导出（便于重构和搜索）
-  ```javascript
-  export const UserProfile = () => {};
-  export const getUserData = () => {};
-  ```
-
-- **默认导出**: 仅用于主组件/入口
-  ```javascript
-  export default App;
-  ```
-
-## Git 提交规范
-
-### 提交信息格式
-```
-<type>(<scope>): <subject>
-
-<body>
-
-<footer>
-```
-
-### 类型 (type)
-- `feat`: 新功能
-- `fix`: 修复 bug
-- `docs`: 文档更新
-- `style`: 代码格式调整
-- `refactor`: 重构
-- `test`: 测试相关
-- `chore`: 构建/工具配置
-
-### 示例
-```
-feat(memory): 添加编码风格偏好文档
-
-- 定义命名规范
-- 添加代码格式化规则
-- 说明注释风格
-```
-
-## 最佳实践
-
-### DRY 原则
-- Don't Repeat Yourself
-- 复用代码，避免重复
-
-### 单一职责
-- 函数/类只做一件事
-- 保持简短易读
-
-### 可读性优先
-- 优先考虑代码可读性
-- 必要时添加注释
-- 使用有意义的命名
-
-### 错误处理
-```javascript
-try {
-  const data = await fetchData();
-  return processData(data);
-} catch (error) {
-  console.error('Error fetching data:', error);
-  throw new Error('Failed to process data');
-}
-```
-
-## 工具配置
-
-### ESLint
-- 使用推荐配置
-- 添加项目特定规则
-
-### Prettier
-- 自动格式化代码
-- 保持团队风格一致
-
-### EditorConfig
-```ini
-root = true
-
-[*]
-charset = utf-8
-indent_style = space
-indent_size = 2
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
-```
-
----
-*注意: 这些是当前偏好设置，可以根据项目需求和团队协作调整*
-
-*最后更新: 2026-02-09*
+- 开发技能：`/dev/skills/programming-brain`
+- 快线流程：`/dev/skills/agile-dev-workflow`

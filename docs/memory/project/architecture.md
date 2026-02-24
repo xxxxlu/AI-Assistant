@@ -1,3 +1,10 @@
+---
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
+---
+
 # 系统架构
 
 ## 整体架构
@@ -8,10 +15,9 @@ AI-Assistant(md)/
 │   ├── router.md          # 路由系统配置
 │   ├── skills/            # 技能和工作流定义
 │   ├── memory/            # 记忆系统
-│   ├── ruls/              # 规则和访问控制
+│   ├── rules/             # 规则和访问控制
 │   ├── dev/               # 开发相关文档
-│   ├── security-logs/     # 安全日志
-│   └── error-logs/        # 错误日志
+│   └── logs/              # 错误/安全/访问日志
 └── README.md              # 项目入口
 ```
 
@@ -67,10 +73,15 @@ AI-Assistant(md)/
 - 历史决策
 - 认证信息（加密存储）
 
-### 规则系统 (`ruls/`)
+### 规则系统 (`rules/`)
 - 访问控制规则
 - 行为约束
 - 安全策略
+
+### 日志系统 (`logs/`)
+- 错误日志
+- 安全日志
+- 文件访问日志
 
 ## 安全架构
 
@@ -93,7 +104,7 @@ AI-Assistant(md)/
 4. 在 `router.md` 中注册技能路由
 
 ### 如何添加新规则
-1. 在 `docs/ruls/` 创建规则文档
+1. 在 `docs/rules/` 创建规则文档
 2. 定义规则的适用范围
 3. 设置优先级
 4. 更新路由系统识别规则

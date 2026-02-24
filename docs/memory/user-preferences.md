@@ -1,12 +1,16 @@
-# 用户偏好
+---
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: migrated
+---
 
-## 记录模板
+# 用户偏好（迁移说明）
 
-| 日期 | 偏好项 | 偏好内容 | 生效条件 |
-| --- | --- | --- | --- |
-| YYYY-MM-DD | 输出风格 | 示例：先结论后细节 | 默认生效 |
+用户偏好已统一维护到：
 
-## 维护规则
+- `/memory/preferences/coding-style`
+- `/memory/preferences/workflow`
+- `/memory/preferences/`（索引入口）
 
-1. 新增偏好必须可执行、可验证。
-2. 冲突偏好按“最近更新时间”优先。
+本文件仅保留兼容说明，避免历史路径失效。

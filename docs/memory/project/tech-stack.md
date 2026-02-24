@@ -1,3 +1,10 @@
+---
+owner: Boss
+last_reviewed: 2026-02-24
+review_cycle_days: 30
+status: active
+---
+
 # 技术栈与工具链
 
 ## 文档技术
@@ -13,6 +20,16 @@
 - 使用 CommonMark 标准
 - 文件名使用小写字母和连字符（kebab-case）
 - 统一使用 `.md` 扩展名
+
+### VitePress
+**当前状态**:
+- 已采用 VitePress 构建文档站点
+- 本地命令：`pnpm docs:dev` / `pnpm docs:build` / `pnpm docs:preview`
+
+**选择原因**:
+- 基于 Markdown，迁移成本低
+- 站点导航与侧边栏配置简单
+- 便于后续接入搜索与版本化
 
 ## 知识管理方法论
 
@@ -45,7 +62,6 @@
 
 ## 未来可能引入的技术
 
-- [ ] VitePress / VuePress（文档网站生成）
 - [ ] 全文搜索引擎（Algolia / MeiliSearch）
 - [ ] 知识图谱可视化工具
 - [ ] CI/CD 自动化部署

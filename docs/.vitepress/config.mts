@@ -8,7 +8,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '路由', link: '/router' },
       { text: '规则', link: '/rules/' },
-      { text: '记忆', link: '/memory/auth/boss-credentials' },
+      { text: '记忆', link: '/memory/' },
       { text: '技能', link: '/skills/' },
       { text: '开发', link: '/dev/' }
     ],
