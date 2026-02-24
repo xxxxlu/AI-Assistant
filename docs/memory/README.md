@@ -22,6 +22,9 @@ status: active
 - 偏好中心：`/memory/preferences/`
 - 决策记录：`/memory/decisions/adr/`
 - 身份与安全约束：`/memory/auth/`
+- 分层检索：`/memory/layers`
+- 经验碎片（L2）：`/snippets/`
+- 复盘沉淀（L2）：`/retrospectives/`
 
 ## 写入规则
 

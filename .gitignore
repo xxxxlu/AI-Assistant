@@ -40,6 +40,19 @@ lerna-debug.log*
 # VitePress cache
 .vitepress/cache/
 .vitepress/dist/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+docs/**/.DS_Store
+
+# Second-brain private memory
+docs/snippets/private/
+docs/retrospectives/private/
+docs/memory/auth/local-secrets.md
+
+# Dev stage generated artifacts
+docs/dev/**/manager-tech-docs/
+docs/dev/**/manager-tecch-docs/
+docs/dev/**/git/
 
 # Temporary files
 *.tmp

@@ -31,6 +31,14 @@ status: active
 
 目录不存在或不可访问时，必须说明并跳过，不得臆造。
 
+## 记忆分层检索（L1/L2/L3）
+
+1. L1（稳定层）：`/rules/`、`/memory/project/`、`/memory/preferences/`、`/memory/decisions/`
+2. L2（经验层）：`/snippets/`、`/retrospectives/`
+3. L3（外部层）：`/world/` 与外部站点
+
+执行顺序：先 L1，再 L2，最后 L3。冲突时按层级高者优先。
+
 ## 文件访问约束
 
 1. 默认定向读取，避免无目标批量扫描。
@@ -42,6 +50,8 @@ status: active
 - 用户偏好：`/memory/preferences/`
 - 历史互动：`/memory/interaction-history/`
 - 专属语气：`/memory/auth/boss-exclusive-tone`
+- 经验碎片：`/snippets/`
+- 复盘沉淀：`/retrospectives/`
 
 ## 领域路由
 
@@ -67,3 +77,9 @@ status: active
 
 - 未经 Boss 明确要求，不主动联网检索。
 - Boss 要求“最新/核实/查找”时，优先给来源。
+
+## 技能检索策略
+
+1. 技能请求优先检索本地技能文档（`/skills/` 与 `/dev/skills/`）。
+2. 本地不存在对应技能或信息不足时，再使用外部站点：`https://skillsmp.com/zh`。
+3. 使用外部结果时，需标注来源并与本地规则对齐后执行。

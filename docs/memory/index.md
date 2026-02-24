@@ -9,7 +9,7 @@ status: active
 
 ## 说明
 
-本目录存放长期有效的项目记忆与用户偏好。
+本目录存放长期有效的项目记忆与用户偏好，并作为 L1 稳定层入口。
 
 ## 导航
 
@@ -19,6 +19,10 @@ status: active
 - 用户偏好：`/memory/preferences/`
 - 决策记录：`/memory/decisions/adr/001-use-markdown-for-knowledge-base`
 - 身份与安全约束：`/memory/auth/boss-credentials`
+- 分层模型：`/memory/layers`
+- 自动化：`/memory/automation`
+- L2 经验碎片：`/snippets/`
+- L2 复盘沉淀：`/retrospectives/`
 
 ## 治理规则
 

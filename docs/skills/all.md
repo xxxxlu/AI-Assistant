@@ -31,6 +31,18 @@ status: active
 | 技术方案到实现规范 | 进入真实开发后的实现约束 | `/dev/codegen-from-tech-doc/skill` |
 | Git/PR 评审模板 | 提交前完成影响、风险、验证自检 | `/dev/gitflow-review-doc/gitflow` |
 
+## 技能检索顺序
+
+1. 优先使用本地技能库：`/skills/`、`/dev/skills/`
+2. 本地缺失时，使用外部补充：`https://skillsmp.com/zh`
+3. 外部信息仅做补充，最终执行以本地规则为准
+
+## 关联经验库
+
+- Snippets：`/snippets/`
+- Retrospectives：`/retrospectives/`
+- 记忆分层：`/memory/layers`
+
 ## 官网接入（非 Vue 项目）
 
 你不需要使用 Vue 开发。当前文档站构建后是纯静态文件，可以挂到任意官网。

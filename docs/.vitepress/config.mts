@@ -13,6 +13,7 @@ export default defineConfig({
       { text: '路由', link: '/router' },
       { text: '规则', link: '/rules/' },
       { text: '记忆', link: '/memory/' },
+      { text: '经验库', link: '/snippets/' },
       { text: '技能', link: '/skills/' },
       { text: '开发', link: '/dev/' }
     ],
@@ -25,7 +26,17 @@ export default defineConfig({
           { text: '规则中心', link: '/rules/' },
           { text: '技能中心', link: '/skills/' },
           { text: '技能总览', link: '/skills/all' },
+          { text: '记忆分层模型', link: '/memory/layers' },
+          { text: '记忆自动化', link: '/memory/automation' },
           { text: '开发文档', link: '/dev/' }
+        ]
+      },
+      {
+        text: '经验沉淀',
+        items: [
+          { text: 'Snippets 碎片库', link: '/snippets/' },
+          { text: 'Retrospectives 复盘库', link: '/retrospectives/' },
+          { text: '记忆 GC 日志', link: '/logs/memory-gc' }
         ]
       },
       {
