@@ -1,9 +1,3 @@
----
-owner: Boss
-last_reviewed: 2026-02-24
-review_cycle_days: 30
-status: active
----
 
 # 系统架构
 
@@ -18,7 +12,7 @@ AI-Assistant(md)/
 │   ├── rules/             # 规则和访问控制
 │   ├── dev/               # 开发相关文档
 │   └── logs/              # 错误/安全/访问日志
-└── README.md              # 项目入口
+└── index.md              # 项目入口
 ```
 
 ## 核心设计模式
@@ -123,5 +117,3 @@ AI-Assistant(md)/
 - [ ] 知识图谱关联
 - [ ] 实时协作编辑
 
----
-*最后更新: 2026-02-09*

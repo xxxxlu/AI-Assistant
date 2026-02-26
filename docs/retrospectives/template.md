@@ -1,7 +1,3 @@
----
-owner: Boss
-status: template
----
 
 # Retrospective: <主题>
 

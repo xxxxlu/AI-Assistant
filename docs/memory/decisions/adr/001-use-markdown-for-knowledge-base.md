@@ -123,7 +123,3 @@
 - [GitHub Flavored Markdown](https://github.github.com/gfm/)
 - [Markdown Guide](https://www.markdownguide.org/)
 
----
-*作者: AI Assistant & User*
-*审核: Pending*
-*最后更新: 2026-02-09*

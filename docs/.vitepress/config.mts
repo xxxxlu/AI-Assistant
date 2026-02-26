@@ -6,58 +6,43 @@ const base = rawBase ? `/${rawBase.replace(/^\/+|\/+$/g, '')}/` : '/'
 export default defineConfig({
   base,
   title: 'AI-Assistant',
-  description: 'AI Common 是 Boss 的 AI 大脑',
+  description: 'AI Second Brain 是 Boss 的执行中枢',
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
+      { text: '快速开始', link: '/quick-start' },
       { text: '路由', link: '/router' },
-      { text: '规则', link: '/rules/' },
-      { text: '记忆', link: '/memory/' },
-      { text: '经验库', link: '/snippets/' },
-      { text: '技能', link: '/skills/' },
-      { text: '开发', link: '/dev/' }
+      { text: '记忆', link: '/memory/index' },
+      { text: '开发', link: '/dev/index' }
     ],
 
     sidebar: [
       {
-        text: '核心',
+        text: 'L1: 核心系统',
         items: [
+          { text: '快速上手', link: '/quick-start' },
           { text: '路由系统', link: '/router' },
-          { text: '规则中心', link: '/rules/' },
-          { text: '技能中心', link: '/skills/' },
-          { text: '技能总览', link: '/skills/all' },
-          { text: '记忆分层模型', link: '/memory/layers' },
-          { text: '记忆自动化', link: '/memory/automation' },
-          { text: '开发文档', link: '/dev/' }
+          { text: '用户偏好', link: '/memory/preferences/index' },
+          { text: '项目事实', link: '/memory/project/index' },
+          { text: '决策历史', link: '/memory/decisions/index' },
+          { text: '身份安全', link: '/memory/auth/index' }
         ]
       },
       {
-        text: '经验沉淀',
+        text: 'L2: 运行经验',
         items: [
-          { text: 'Snippets 碎片库', link: '/snippets/' },
-          { text: 'Retrospectives 复盘库', link: '/retrospectives/' },
-          { text: '记忆 GC 日志', link: '/logs/memory-gc' }
+          { text: '专家系统', link: '/skills/prompt-expert/meta-expert' },
+          { text: '经验碎片', link: '/snippets/index' },
+          { text: '阶段复盘', link: '/retrospectives/index' },
+          { text: '研发规范', link: '/dev/index' }
         ]
       },
       {
-        text: '支持文档',
+        text: '管理与审计',
         items: [
-          { text: '世界知识约定', link: '/world/' },
-          { text: '官网接入', link: '/deploy/official-site-integration' },
-          { text: '错误日志', link: '/logs/errors' },
-          { text: '安全日志', link: '/logs/security' },
-          { text: '访问日志', link: '/logs/file-access' }
-        ]
-      },
-      {
-        text: '开发目录',
-        items: [
-          { text: '开发文档中心', link: '/dev/' },
-          { text: '需求评审输出', link: '/dev/req-review-tech-doc/' },
-          { text: '接口契约评审', link: '/dev/technical-review-doc/' },
-          { text: '技术方案到实现', link: '/dev/codegen-from-tech-doc/' },
-          { text: 'Git 与 PR 评审', link: '/dev/gitflow-review-doc/' },
-          { text: '开发执行技能', link: '/dev/skills/' }
+          { text: '元数据标准', link: '/metadata-schema' },
+          { text: '世界知识约定', link: '/world/index' },
+          { text: '日志中心', link: '/logs/index' }
         ]
       }
     ]

@@ -1,7 +1,3 @@
----
-owner: Boss
-status: template
----
 
 # Snippet: <标题>
 

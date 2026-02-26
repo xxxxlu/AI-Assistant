@@ -1,9 +1,3 @@
----
-owner: Boss
-last_reviewed: 2026-02-24
-review_cycle_days: 30
-status: active
----
 
 # 技术栈与工具链
 
@@ -70,5 +64,3 @@ status: active
 
 重要的技术选型决策应该记录在 `/docs/memory/decisions/adr/` 目录下。
 
----
-*最后更新: 2026-02-09*

@@ -1,9 +1,3 @@
----
-owner: Boss
-last_reviewed: 2026-02-24
-review_cycle_days: 14
-status: active
----
 
 # Snippets 经验碎片库
 

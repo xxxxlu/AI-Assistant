@@ -1,9 +1,3 @@
----
-owner: Boss
-last_reviewed: 2026-02-24
-review_cycle_days: 30
-status: active
----
 
 # 官网接入指南（非 Vue 项目）
 

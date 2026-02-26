@@ -1,9 +1,3 @@
----
-owner: Boss
-last_reviewed: 2026-02-24
-review_cycle_days: 30
-status: active
----
 
 # 项目概览
 
@@ -58,5 +52,3 @@ status: active
 - 文档目录: `/docs`
 - 技能目录: `/docs/skills`
 
----
-*最后更新: 2026-02-09*

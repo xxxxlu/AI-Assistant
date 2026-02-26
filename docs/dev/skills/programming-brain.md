@@ -1,9 +1,3 @@
----
-owner: Boss
-last_reviewed: 2026-02-24
-review_cycle_days: 30
-status: active
----
 
 # 技能：编程大脑
 

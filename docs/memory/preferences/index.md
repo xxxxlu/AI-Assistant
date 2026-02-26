@@ -1,19 +1,23 @@
----
-owner: Boss
-last_reviewed: 2026-02-24
-review_cycle_days: 30
-status: active
----
 
-# 用户偏好中心
+# 用户偏好 (User Preferences)
 
-## 当前有效偏好
+## 0. 基本原则
+1. **结果导向**: 结论先行，再给依据。
+2. **小步快跑**: 任务拆分，频繁验证。
+3. **可复用性**: 优先复用，其次重构，最后新建。
 
-- 编码风格：`/memory/preferences/coding-style`
-- 工作流程：`/memory/preferences/workflow`
 
-## 维护规则
+## 2. 工作流程 (Workflow)
 
-1. 仅记录可执行、可验证的偏好。
-2. 冲突偏好按 `last_reviewed` 最新文档生效。
-3. 通用方法论维护在 `docs/dev/skills/`，避免重复。
+### git 规范 (唯一口径)
+- **分支**: main (受保护) | feature/* | bugfix/* | docs/*。
+- **合并**: 必须 PR + 自测 + 记录回滚方案（针对 P0/P1）。
+
+### 交付门禁
+- **P0 (Critical)**: 验收标准 + PR + 回滚方案。
+- **P1 (High)**: 方案说明 + PR + 测试记录。
+
+
+## 4. 关联文档
+- [路由系统](../../router.md)
+- [开发技能](../../dev/skills/agile-dev-workflow.md)
