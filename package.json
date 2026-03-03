@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "lucide-vue-next": "^0.575.0",
     "vitepress": "2.0.0-alpha.15"
   },
   "scripts": {
@@ -9,7 +10,6 @@
     "docs:preview": "vitepress preview docs",
     "memory:snippet": "bash scripts/capture_snippet.sh",
     "memory:retro": "bash scripts/new_retro.sh",
-    "memory:gc": "bash scripts/memory_gc.sh",
-    "metadata:check": "python3 scripts/check_health.py"
+    "memory:gc": "bash scripts/memory_gc.sh"
   }
 }

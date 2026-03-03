@@ -44,7 +44,7 @@ pnpm memory:gc -- [天数]
 ### 执行流程
 
 1. **读取路由**: 先读 `docs/router.md` 确定身份和优先级
-2. **分层检索**: L1 (rules/memory) → L2 (snippets/retrospectives) → L3 (world)
+2. **分层检索**: L1 (memory) → L2 (snippets/retrospectives) → L3 (world)
 3. **执行与记录**: 按规则执行，异常记录到 `logs/`
 
 ### 关键路径
@@ -54,7 +54,7 @@ pnpm memory:gc -- [天数]
   ↓
 router.md (身份、优先级)
   ↓
-L1: rules/ + memory/
+L1: memory/
   ↓
 L2: snippets/ + retrospectives/
   ↓
@@ -76,9 +76,15 @@ L3: world/ (如需要)
 
 ### 元数据规范
 
-每个文档必须包含:
+每个文档推荐包含以下 frontmatter（详见 [metadata-schema.md](./metadata-schema.md)）:
 
 ```yaml
+---
+owner: Boss
+created: 2026-02-09
+last_reviewed: 2026-02-28
+status: active
+---
 ```
 
 ### 日志规范

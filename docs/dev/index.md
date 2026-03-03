@@ -6,8 +6,6 @@
 - [编程大脑 (思考规范)](./skills/programming-brain.md)
 
 ## 2. 任务模板中心
-- [需求方案模板](./templates/requirement-doc-template.md)
-- [技术/接口评审模板](./templates/technical-review-template.md)
 
 ## 3. 约束与工具
 - Git 分支管理：详见 [用户偏好](../memory/preferences/index.md)

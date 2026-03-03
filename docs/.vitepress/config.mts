@@ -13,6 +13,7 @@ export default defineConfig({
       { text: '快速开始', link: '/quick-start' },
       { text: '路由', link: '/router' },
       { text: '记忆', link: '/memory/index' },
+      { text: '技能', link: '/skills/index' },
       { text: '开发', link: '/dev/index' }
     ],
 
@@ -22,6 +23,7 @@ export default defineConfig({
         items: [
           { text: '快速上手', link: '/quick-start' },
           { text: '路由系统', link: '/router' },
+          { text: '规则系统', link: '/rules/index' },
           { text: '用户偏好', link: '/memory/preferences/index' },
           { text: '项目事实', link: '/memory/project/index' },
           { text: '决策历史', link: '/memory/decisions/index' },
@@ -31,6 +33,7 @@ export default defineConfig({
       {
         text: 'L2: 运行经验',
         items: [
+          { text: '技能中心', link: '/skills/index' },
           { text: '专家系统', link: '/skills/prompt-expert/meta-expert' },
           { text: '经验碎片', link: '/snippets/index' },
           { text: '阶段复盘', link: '/retrospectives/index' },
@@ -40,7 +43,7 @@ export default defineConfig({
       {
         text: '管理与审计',
         items: [
-          { text: '元数据标准', link: '/metadata-schema' },
+          { text: '部署与集成', link: '/deploy/index' },
           { text: '世界知识约定', link: '/world/index' },
           { text: '日志中心', link: '/logs/index' }
         ]
