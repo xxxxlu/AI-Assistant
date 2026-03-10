@@ -41,6 +41,13 @@ export default defineConfig({
         ]
       },
       {
+        text: '分享与实践',
+        items: [
+          { text: 'AI 驱动开发指南', link: '/share-ai-driven-dev-guide' },
+          { text: 'Everything Claude Code', link: '/share-everything-claude-code' }
+        ]
+      },
+      {
         text: '管理与审计',
         items: [
           { text: '部署与集成', link: '/deploy/index' },

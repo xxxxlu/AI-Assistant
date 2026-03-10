@@ -14,5 +14,4 @@ export const PASSWORD_HASH =
 /** localStorage 中存储认证 Token 的 key */
 export const AUTH_STORAGE_KEY = 'edith-auth-token'
 
-/** Token 有效期（毫秒），默认 7 天 */
-export const TOKEN_TTL = 7 * 24 * 60 * 60 * 1000
+export const TOKEN_TTL = 5 * 60 * 1000
